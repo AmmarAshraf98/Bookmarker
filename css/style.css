@@ -1,0 +1,165 @@
+body {
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+    background-color: rgba(145, 185, 145, 0.795);
+}
+
+
+
+:root {
+    --main-color: #ce1212;
+    --valid-color: green;
+    --black-color: #37373f;
+    --third-color: #4f4f5a;
+    --second-color: #7f7f90;
+    --bg-white: #fff;
+    --bg-gray: #eee;
+    --color-white: #fff;
+    --nav-bg-color: #fff;
+    --color-black: #000;
+    --shadow-color: #0000001b;
+    --second-font: 'Inter', sans-serif;
+    --icon-color: #fff;
+    --card-p: #7f7f90;
+}
+
+::selection {
+    background-color: var(--main-color);
+    color: white;
+}
+
+h1 {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 50px;
+}
+
+h2 {
+    background-image: linear-gradient(to right, var(--main-color), var(--valid-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.form-group {
+    position: relative;
+}
+
+.wrong::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00d";
+    display: inline-block;
+    color: var(--main-color);
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.correct::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    display: inline-block;
+    color: var(--valid-color);
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+input:focus {
+    box-shadow: 0px 0px 8px var(--black-color) !important;
+    border: 1px solid var(--black-color) !important;
+}
+
+.valid {
+    box-shadow: 0px 0px 8px var(--valid-color) !important;
+    border: 1px solid var(--valid-color) !important;
+}
+
+.not-valid {
+    box-shadow: 0px 0px 8px var(--main-color) !important;
+    border: 1px solid var(--main-color) !important;
+}
+
+.warning {
+    color: var(--main-color);
+    font-family: 'Caveat Brush', cursive;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+
+.add {
+    position: relative;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    font-weight: bolder;
+    transition: all .5s;
+    background-image: linear-gradient(to right, var(--main-color), var(--valid-color));
+}
+
+.add::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    border-radius: inherit;
+    background-color: white;
+    transition: all .5s;
+}
+
+.add::after {
+    content: "Add Site";
+    position: absolute;
+    inset: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: inherit;
+    background-color: transparent;
+    transition: all .5s;
+}
+
+
+
+.add:hover::before {
+    inset: 100%;
+}
+
+.add:hover::after {
+    color: white;
+}
+
+.inputWrapper {
+    padding: 20px;
+    width: 60%;
+    margin: auto;
+    transition: all .5s;
+    border-width: 3px 0;
+    border-style: dashed;
+    border-color: var(--valid-color);
+}
+
+hr {
+    color: var(--main-color);
+    font-weight: bold;
+    font-style: dashed;
+}
+
+label {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+label i {
+    color: var(--main-color);
+}
+
+thead th {
+    font-size: 22px;
+    font-weight: bolder;
+}
